@@ -1,0 +1,33 @@
+digraph G {
+"SDR1002-CASING_UPDATED_R1_v15_1_1_1" -> "lidar_1_1_1"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "SDR1002-CASING_UPDATED_R1_v15_1_1_1"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /gazebo\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_depth_frame" -> "back_camera_color_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_link" -> "back_camera_depth_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_color_frame" -> "back_camera_color_optical_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_bottom_screw_frame" -> "back_camera_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_depth_frame" -> "back_camera_depth_optical_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"SDR1002-CASING_UPDATED_R1_v15_1_1_1" -> "back_camera_bottom_screw_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_depth_frame" -> "back_camera_left_ir_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_left_ir_frame" -> "back_camera_left_ir_optical_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_depth_frame" -> "back_camera_right_ir_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"back_camera_right_ir_frame" -> "back_camera_right_ir_optical_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_depth_frame" -> "front_camera_color_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_link" -> "front_camera_depth_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_color_frame" -> "front_camera_color_optical_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_bottom_screw_frame" -> "front_camera_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_depth_frame" -> "front_camera_depth_optical_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"SDR1002-CASING_UPDATED_R1_v15_1_1_1" -> "front_camera_bottom_screw_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_depth_frame" -> "front_camera_left_ir_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_left_ir_frame" -> "front_camera_left_ir_optical_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_depth_frame" -> "front_camera_right_ir_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+"front_camera_right_ir_frame" -> "front_camera_right_ir_optical_frame"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 56.601 sec old)\nBuffer length: 0.000 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 56.601"[ shape=plaintext ] ;
+ }->"dummy";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 56.601"[ shape=plaintext ] ;
+ }->"odom";
+}

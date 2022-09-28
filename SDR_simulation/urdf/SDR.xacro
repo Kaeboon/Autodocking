@@ -1,0 +1,219 @@
+<?xml version="1.0" ?>
+<robot name="SDR_simulation" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find SDR_simulation)/urdf/materials.xacro" />
+<xacro:include filename="$(find SDR_simulation)/urdf/SDR.trans" />
+<xacro:include filename="$(find SDR_simulation)/urdf/SDR.gazebo" />
+<link name="dummy">
+   </link>
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.010722518568304513 0.006694357395476144 -0.08269494313200608" rpy="0 0 0"/>
+    <mass value="11.561847095788508"/>
+    <inertia ixx="0.080209" iyy="0.243446" izz="0.306972" ixy="-1.4e-05" iyz="1.8e-05" ixz="-1.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://SDR_simulation/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://SDR_simulation/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+
+<!--
+<link name="depth_front_1_1_1">
+  <inertial>
+    <origin xyz="0.5730376908980672 0.5992629887321684 0.6680302544483272" rpy="0 0 0"/>
+    <mass value="0.3380579076115263"/>
+    <inertia ixx="0.000211" iyy="3.1e-05" izz="0.000212" ixy="2e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.295561 0.591479 0.211756" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://SDR_simulation/meshes/depth_front_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.295561 0.591479 0.211756" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://SDR_simulation/meshes/depth_front_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+-->
+<!--
+<link name="depth_back_1_1_1">
+  <inertial>
+    <origin xyz="-0.00790370220796277 -0.06679700467594515 7.785018390688014e-05" rpy="0 0 0"/>
+    <mass value="0.33805790761154103"/>
+    <inertia ixx="0.000211" iyy="3.1e-05" izz="0.000212" ixy="-2e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.283501 -0.071748 -0.456477" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://SDR_simulation/meshes/depth_back_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.283501 -0.071748 -0.456477" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://SDR_simulation/meshes/depth_back_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+-->
+
+<link name="SDR1002-CASING_UPDATED_R1_v15_1_1_1">
+  <inertial>
+    <origin xyz="0.2657281406198663 0.08006677444428358 0.5387777043318351" rpy="0 0 0"/>
+    <mass value="40.1869871836075"/>
+    <inertia ixx="6.290556" iyy="6.788875" izz="2.591517" ixy="0.014854" iyz="0.016965" ixz="-0.779566"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.209966 0.068252 0.088496" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://SDR_simulation/meshes/SDR1002-CASING_UPDATED_R1_v15_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.209966 0.068252 0.088496" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://SDR_simulation/meshes/SDR1002-CASING_UPDATED_R1_v15_1_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1_1_1">
+      <visual>
+        <origin xyz="0 0 0" rpy="1.5707 0 0" />
+        <geometry>
+          <cylinder radius="0.09" length="0.044"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="1.5707 0 0" />
+        <geometry>
+          <cylinder radius="0.09" length="0.044"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0 0 0" rpy="1.5707 0 0" />
+        <mass value="9.381781913730324"/>
+        <inertia ixx="0.021016" iyy="0.036551" izz="0.021016" ixy="0.0" iyz="1e-06" ixz="0.0"/>
+      </inertial>
+</link>
+
+<link name="right_wheel_1_1_1">
+      <visual>
+        <origin xyz="0 0 0" rpy="-1.5707 0 0" />
+        <geometry>
+          <cylinder radius="0.09" length="0.044"/>
+        </geometry>
+        <material name="black"/>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="-1.5707 0 0" />
+        <geometry>
+          <cylinder radius="0.09" length="0.044"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0 0 0" rpy="-1.5707 0 0" />
+        <mass value="9.381781913730324"/>
+        <inertia ixx="0.021016" iyy="0.036551" izz="0.021016" ixy="0.0" iyz="1e-06" ixz="0.0"/>
+      </inertial>
+</link>
+
+<joint name="dummy_joint" type="fixed">
+  <parent link="dummy"/>
+  <child link="base_link"/>
+  </joint>
+
+
+
+<!--
+<joint name="Rigid13" type="fixed">
+  <origin xyz="-0.085595 -0.523227 -0.12326" rpy="0 0 0"/>
+  <parent link="SDR1002-CASING_UPDATED_R1_v15_1_1_1"/>
+  <child link="depth_front_1_1_1"/>
+</joint>
+-->
+
+<!--
+<joint name="Rigid14" type="fixed">
+  <origin xyz="-0.073535 0.14 0.544973" rpy="0 0 0"/>
+  <parent link="SDR1002-CASING_UPDATED_R1_v15_1_1_1"/>
+  <child link="depth_back_1_1_1"/>
+</joint>
+-->
+
+<joint name="Rigid16" type="fixed">
+  <origin xyz="-0.209966 -0.068252 -0.088496" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="SDR1002-CASING_UPDATED_R1_v15_1_1_1"/>
+</joint>
+
+<joint name="Rev19" type="continuous">
+  <origin xyz="-0.020606 0.28414 -0.055" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1_1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rev20" type="continuous">
+  <origin xyz="-0.020606 -0.26296 -0.055" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1_1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<xacro:include filename="$(find SDR_simulation)/urdf/front_d435.urdf.xacro" />
+  <sensor_d435_front parent="SDR1002-CASING_UPDATED_R1_v15_1_1_1">
+  <origin xyz="0.485 0.07265 0.53412" rpy="0 0 0"/>
+  </sensor_d435_front>
+
+<xacro:include filename="$(find SDR_simulation)/urdf/back_d435.urdf.xacro" />
+  <sensor_d435_back parent="SDR1002-CASING_UPDATED_R1_v15_1_1_1">
+  <origin xyz="-0.073535 0.08 0.5400" rpy="0 0 3.14159"/>
+  </sensor_d435_back>
+
+<xacro:include filename="$(find SDR_simulation)/urdf/front_hc_sr04.urdf.xacro" />
+  <front_hc_sr04 parent="SDR1002-CASING_UPDATED_R1_v15_1_1_1">
+  <origin xyz="0.525375 0.05281 0.108" rpy="0 0 0"/>
+  </front_hc_sr04>
+
+<xacro:include filename="$(find SDR_simulation)/urdf/left_hc_sr04.urdf.xacro" />
+  <left_hc_sr04 parent="SDR1002-CASING_UPDATED_R1_v15_1_1_1">
+  <origin xyz="0.210375 0.42081 0.101" rpy="0 0 1.5707"/>
+  </left_hc_sr04>
+
+<xacro:include filename="$(find SDR_simulation)/urdf/right_hc_sr04.urdf.xacro" />
+  <right_hc_sr04 parent="SDR1002-CASING_UPDATED_R1_v15_1_1_1">
+  <origin xyz="0.170375 -0.27081 0.101" rpy="0 0 -1.5707"/>
+  </right_hc_sr04>
+
+<xacro:include filename="$(find SDR_simulation)/urdf/lidar.urdf.xacro" />
+  <lidar_1_1_1 parent="SDR1002-CASING_UPDATED_R1_v15_1_1_1">
+  <origin xyz="0.45 0.08 0.38" rpy="0 0 0"/>
+  </lidar_1_1_1>  
+
+<gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/</robotNamespace>
+  </plugin>
+</gazebo>
+
+</robot>

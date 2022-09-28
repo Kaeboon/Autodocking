@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<robot name="SDR_simulation" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="Rev19_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev19">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev19_actr">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Rev20_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Rev20">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Rev20_actr">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
