@@ -30,7 +30,7 @@ You may be curious what other files do:
 1) rotate_align_dock is an incomplete implementation of enabling robot to move to the opposite of artag before dock [youtubelink](https://www.youtube.com/watch?v=ojB2HuYRQBQ), feel free to work on it.
 
 
-
+----------------------------------------------------------------------------------------
 
 For running the docking files in the actual SDR:
 You just need to download and build the following packages in the actual SDR:
