@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="auto_docking" type="rotate_align_entry.py" name="rotate_align_entry" output="screen">
+
+  </node>
+
+</launch>
+

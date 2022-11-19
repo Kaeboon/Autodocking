@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="auto_docking" type="camera_info_republish.py" name="camera_info_republish" output="screen">
+
+  </node>
+
+</launch>
+
