@@ -6,6 +6,8 @@ You may watch the the Gazebo simulation testrun here: [youtubelink](https://www.
 
 More details explanation of the methodology implementation, please see my final report [pdf](https://github.com/Kaeboon/Autodocking/blob/main/UROP_final_report.pdf)
 
+--------------------------------------------------------------------------------------------
+
 For simulating the files in Gazebo:
 You will need to download and build the following packages/application:
 1) ar_track_alvar: [link](https://github.com/ros-perception/ar_track_alvar)
