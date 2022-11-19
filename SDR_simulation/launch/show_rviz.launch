@@ -1,0 +1,6 @@
+<launch>
+  <node type="rviz" name="rviz" pkg="rviz" respawn="false" args="-d $(find SDR_simulation)/launch/my_config.rviz" />
+
+  <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph"/>
+
+</launch>

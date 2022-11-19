@@ -1,0 +1,109 @@
+FULL PROCEDURE FOR RUNNING AUTODOCKING STIMULATION
+1)
+roslaunch SDR_simulation movingparts.launch -1
+2)
+ROS_NAMESPACE=cameraUpper/color rosrun image_proc image_proc -2
+3)
+go to gazebo and change the robot starting position, go to rotate_and_dock.py to change your parameter
+4)
+roslaunch ar_track_alvar pr2_indiv_no_kinect_copy.launch -3
+5)
+check on RVIZ if the image is detected already
+6)
+rostopic echo x_value >> "x_dist__Kp_x= Kp_y= Ki_x= Ki_y= .txt" -4
+rostopic echo y_value >> "y_dist__Kp_x= Kp_y= Ki_x= Ki_y= .txt" -4.2
+7)
+roslaunch SDR_simulation rotate_and_dock.launch -5
+8)
+after robot stop, CTRL-C terminal 4 & 5
+
+then repeat again from 3)
+
+
+
+then use data_to_csv python to convert all Kx Kp data to csv, then go back windows to do more graph thingy lah
+
+
+
+
+
+the 5h poses (forget this bah)
+
+[0.24701700000000004, 0.0, 0, [0, 0, 0.0]]
+
+[0.33747814557105515, 0.51303042585712, 0, [0, 0, -0.349066]]
+
+[0.26980538996516534, 0.2604723769966623, 0, [0, 0, -0.174533]]
+
+[0.26980538996516534, -0.2604723769966623, 0, [0, 0, 0.174533]]
+
+[0.33747814557105515, -0.51303042585712, 0, [0, 0, 0.349066]]
+
+
+Pos
+rostopic pub -1 /gazebo/set_model_state gazebo_msgs/ModelState "model_name: 'SDR_simulation'
+pose:
+  position:
+    x: 0.26
+    y: 0.0
+    z: 0.144
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+twist:
+  linear:
+    x: 0.24701700000000004
+    y: 0.0
+    z: 0.0
+  angular:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+
+
+Pos 1
+rostopic pub -1 /gazebo/set_model_state gazebo_msgs/ModelState "model_name: 'SDR_simulation'
+pose:
+  position:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+twist:
+  linear:
+    x: 0.24701700000000004
+    y: 0.0
+    z: 0.0
+  angular:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+
+Pos 2
+rostopic pub -1 /gazebo/set_model_state gazebo_msgs/ModelState "model_name: 'SDR_simulation'
+pose:
+  position:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  orientation:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+twist:
+  linear:
+    x: 0.33747814557105515
+    y: 0.51303042585712
+    z: 0.0
+  angular:
+    x: 0.0
+    y: 0.0
+    z: -0.349066
+reference_frame: ''" 

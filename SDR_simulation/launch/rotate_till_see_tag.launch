@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="SDR_simulation" type="rotate_till_see_tag.py" name="rotate_till_see_tag" output="screen">
+
+  </node>
+
+</launch>
+

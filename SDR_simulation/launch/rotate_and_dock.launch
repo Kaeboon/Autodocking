@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="SDR_simulation" type="rotate_and_dock.py" name="rotate_and_dock" output="screen"
+  />
+
+
+</launch>
+

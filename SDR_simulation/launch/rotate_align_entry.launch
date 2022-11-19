@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="SDR_simulation" type="rotate_align_entry.py" name="rotate_align_entry" output="screen"
+  />
+
+
+</launch>
+
