@@ -43,3 +43,9 @@ You just need to download and build the following packages in the actual SDR:
 Then, to run the acutodocking operation just:
 1) pr2_indic_no_kinect_copy (will run artag detection node)
 2) rotate_and dock (will run the auto docking operation)
+
+-------------------------------------------------------------------------------------------
+
+The UROP Presentation (1).pdf is kinda outdated but might still be useful so I still includedt it here.
+
+If you need any more information or help, feel free to contact me!
