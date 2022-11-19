@@ -10,7 +10,7 @@ For simulating the files in Gazebo:
 You will need to download and build the following packages/application:
 1) ar_track_alvar: [link](https://github.com/ros-perception/ar_track_alvar)
 2) realsense-gazebo-plugin [link](https://github.com/pal-robotics/realsense_gazebo_plugin)
-3) realsense-ros [link](https://github.com/IntelRealSense/realsense-ros)
+3) realsense-ros [link](https://github.com/IntelRealSense/realsense-ros) \
 4) SDR-simulation under this respiratory
 And install this application:
 1) realsense SDK 2.0 application [link](https://www.intelrealsense.com/sdk-2/)
