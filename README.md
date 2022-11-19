@@ -46,6 +46,6 @@ Then, to run the acutodocking operation just:
 
 -------------------------------------------------------------------------------------------
 
-The UROP Presentation (1).pdf is kinda outdated but might still be useful so I still includedt it here.
+The UROP Presentation (1).pdf is kinda outdated but might still be useful so I still included it here.
 
 If you need any more information or help, feel free to contact me!
