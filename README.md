@@ -1,5 +1,7 @@
 # Autodocking
-This is a project for my NUS undergraduate EG2605 UROP, to build an auto docking functionality to allow the SDR mobile robot provided by Solustar Pte Ltd to dock with charging station using visual input to detect AR tag and using PI-control to adjust wheel velocity. I uses ROS melodic for this project. The robot should start docking from 1.5 meter in front of the tag. The motivation is to let the robot complete all its navigation task, then return to this position, then start to dock to the charging station.
+This is a project for my NUS undergraduate EG2605 UROP, to build an auto docking functionality to allow the SDR mobile robot provided by Solustar Pte Ltd to dock with charging station using visual input to detect AR tag and using PI-control to adjust wheel velocity. The robot should start docking from 1.5 meter in front of the tag. The motivation is to let the robot complete all its navigation task, then return to this position, then start to dock to the charging station.
+
+This project is developed using Ubuntu 18.04 and ROS1 Melodic. 
 
 You may watch the actual SDR docking testruns here: [youtubelink](https://www.youtube.com/watch?v=4Hauzwl-VmU)
 
@@ -9,15 +11,19 @@ More details explanation of the methodology implementation, please see my final 
 
 --------------------------------------------------------------------------------------------
 
+
 For simulating the files in Gazebo:
+
+Prereq: Ubuntu and ROS1 installed.
+
+You will need to install this application by follwoing the guide:
+1) realsense SDK 2.0 application [link](https://www.intelrealsense.com/sdk-2/)
+
 You will need to download and build the following packages in your workspace.
 1) ar_track_alvar: [link](https://github.com/ros-perception/ar_track_alvar)
 2) realsense-gazebo-plugin [link](https://github.com/pal-robotics/realsense_gazebo_plugin)
 3) realsense-ros [link](https://github.com/IntelRealSense/realsense-ros)
 4) SDR-simulation under this respiratory
-
-And install this application:
-1) realsense SDK 2.0 application [link](https://www.intelrealsense.com/sdk-2/)
 
 And do the following:
 1) Download the 'Gazebo models' from this respiratory and unzip.
@@ -30,22 +36,22 @@ Then, to simulate it, just run this three launch files in order:
 3) rotate_and dock (will run the auto docking operation)
 
 You may be curious what other files do:
-1) rotate_align_dock is an incomplete implementation of enabling robot to move to the opposite of artag before dock, as shown here: [youtubelink](https://www.youtube.com/watch?v=ojB2HuYRQBQ), feel free to work/improve on it.
+1) rotate_align_dock is an incomplete implementation of enabling robot to move to the opposite of artag before dock, as shown here: [youtubelink](https://www.youtube.com/watch?v=ojB2HuYRQBQ), feel free to work on it.
 
 
 ----------------------------------------------------------------------------------------
 
-For running the docking files in the actual SDR:
-You just need to download and build the following packages in the actual SDR:
+For running the docking files in the actual SDR Robot (from Solustar):
+You just need to download and build the following packages in the SDR's NUC:
 1) ar_track_alvar: [link](https://github.com/ros-perception/ar_track_alvar)
 2) auto_docking under this respitatory
 
-Then, to run the acutodocking operation just:
+Then, to run the acutodocking operation, just run the following in order:
 1) pr2_indic_no_kinect_copy (will run artag detection node)
-2) rotate_and dock (will run the auto docking operation)
+2) rotate_and dock (will start running the auto docking operation)
 
 -------------------------------------------------------------------------------------------
 
-The UROP Presentation (1).pdf is kinda outdated but might still be useful so I still included it here.
+The UROP Presentation (1).pdf file is outdated and should not be used as guide.
 
 If you need any more information or help, feel free to contact me!
