@@ -23,6 +23,10 @@ You will need to download and build the following packages in your workspace.
 3) realsense-ros [link](https://github.com/IntelRealSense/realsense-ros)
 4) SDR-simulation under this respiratory
 
+You will need to check your ~/.gazebo folder for 'worlds' and 'models' folders. If they are not there, do the followings:
+1) download from https://github.com/leonhartyao/gazebo_models_worlds_collection and copy both folders there, especially the willowgarage.world + sun, ground models.
+2) download from https://github.com/osrf/gazebo_models and copy the additional models there. especially willowgarage models.
+
 And do the following:
 1) Download the 'Gazebo models' from this respiratory and unzip.
 2) Copy the 'willowgarage_with_artag.world' file to .gazebo/worlds of your computer.
